@@ -1,170 +1,180 @@
-//array simples
-var cars = ['BMW', 'FIAT', 'FORD'];
-let text , text2 = '';
+/* 
+What is an Array?
+An array is a special variable, which can hold more than one value at a time.
+
+If you have a list of items (a list of car names, for example), storing the cars in single variables could look like this:
 
 
-for (let x of cars) {
-  text += x + '<br>';
-}
+Uma matriz é uma variável especial, 
+que pode conter mais de um valor por vez.
 
-document.getElementById('a1').style.backgroundColor = 'black';
-document.getElementById('a1').style.color = 'white';
-document.getElementById('a1').innerHTML = text;
-//array simples
+Se você tiver uma lista de itens 
+(uma lista de nomes de carros, por exemplo), 
+armazenar os carros em variáveis ​​únicas poderia
+ser assim:
 
-//Loop for/of JavaScript
-    const language = 'JavaScript';
-    // const text2 = '';
+No entanto, e se você quiser percorrer os carros 
+e encontrar um específico? E se você não tivesse 
+3 carros, mas 300?
 
-    for (let y of language) {
-        text2 += y + ' - ';
-    }
+A solução é um array!
 
-document.getElementById('a2').style.backgroundColor = 'blue';
-document.getElementById('a2').style.color = 'white';
-document.getElementById('a2').innerHTML = text2;
-//Loop for/of JavaScript
+Uma matriz pode conter muitos valores sob um único 
+nome e você pode acessar os valores referindo-se a 
+um número de índice.
 
-//Class 
-    class Car {
-        constructor(name, year) {
-            this.name = name;
-            this.year = year;
-        }
-    }
+Usar um literal de array é a maneira mais fácil de 
+criar um Array JavaScript.
 
-    myCar = new Car('FORD', 2014);//Cria um objeto da class para usar a logica!
+exemplo
+var cars = ["Saab", "Volvo", "BMW"];
 
-document.getElementById('a3').style.backgroundColor = 'pink';
-document.getElementById('a3').style.color = 'black';
-document.getElementById('a3').innerHTML = myCar.name + ' ' + myCar.year;
-//Class OBS class não é objeto; mais podemos criar objetos apartir de uma class!
-  
-    let myCar1 = new Car('Ferrari', 2020);//Oserve que novo objeto foi criado da class Car!
-
-document.getElementById('a4').style.backgroundColor = 'Green';
-document.getElementById('a4').style.color = 'white';
-document.getElementById('a4').innerHTML = myCar1.name + ' ' + myCar1.year;
-//Class
-
-// JavaScript Promises 
-// Uma promessa é um objeto JavaScript que vincula "Código de produção" e "Código de consumo".
-// "Código de produção" pode levar algum tempo e "Código de consumo" deve aguardar o resultado.
-document.getElementById('a5').style.backgroundColor = 'black';
-    document.getElementById('a5').style.color = 'white';
-    document.getElementById('a5').innerHTML = 'Quero te dizer uma coisa!';
-
-let myPromise = new Promise(function(myResolve, myReject) {
-    setTimeout(function(){ myResolve("Eu te amo"); }, 3000);
-  });
-
-myPromise.then(function(value) {
-    document.getElementById('a6').style.backgroundColor = 'red';
-    document.getElementById('a6').style.color = 'white';
-    document.getElementById('a6').innerHTML = value;
-})
-
-// JavaScript Promises 
-
-// JS Symboll
-
-/* Um símbolo JavaScript é um tipo de dados primitivo, assim como Number, String ou Boolean.
-Ele representa um identificador "oculto" exclusivo que nenhum outro código pode acessar acidentalmente.
-Por exemplo, se diferentes codificadores quiserem adicionar uma propriedade person.id a um objeto pessoa pertencente a um código de terceiros, eles podem misturar os valores uns dos outros.
-Usar Symbol () para criar identificadores exclusivos resolve este problema.
 */
 
-const person = {
-  firstName: "John",
-  lastName: "Doe",
-  age: 50,
-  eyeColor: "blue"
-};
+// array simples
 
-let id = Symbol('id');
-person.id = 1.1000;
+var cars = ["Saab", "Volvo", "BMW"];
 
-document.getElementById('a7').style.backgroundColor = 'yellow';
-document.getElementById('a7').innerHTML = person.id;
-// JS Symboll
+document.getElementById('a1').style.border = '1px solid black';
+document.getElementById('a1').innerHTML = cars;
 
-// Default Parameter Values / Valores de parametro padrão!
-function myFunction(x, y = 10) {
-    // y is 10 if not passed or undefined / y é 10 se não for aprovado ou indefinido
-    return x + y;
-  }
+var caneta = ['tp', 'js', 'kp'];
 
-document.getElementById('a8').style.backgroundColor = 'skyblue';
-document.getElementById('a8').style.color = 'white';
-document.getElementById("a8").innerHTML = myFunction(-5);
-// Default Parameter Values / Valores de parametro padrão!
+caneta[3] = 'Glades';
+document.getElementById('a2').style.backgroundColor = 'red';
+document.getElementById('a2').style.color = 'white';
+document.getElementById('a2').innerHTML = caneta[2];
 
-// Function Rest Parameter / Parâmetro de descanso de função
+// Mudando um Elemento Array caneta[0] tinha value 'tp'
+// e agora se torna 'ABB'
 
-function sum(...args) {
-    let sum = 0;
-    for (let arg of args) sum += arg;
-    return sum;
-  }
-  
-  let x = sum(4, 9, 16, 25, 29, 100, 66, 77);
+caneta[0] = 'ABB';
+document.getElementById('a3').style.backgroundColor = 'blue';
+document.getElementById('a3').innerHTML = caneta[0];
+document.getElementById('a3').style.color = 'white';
+// array simples
 
-document.getElementById('a9').style.backgroundColor = 'purple';
-document.getElementById('a9').style.color = 'white';
-document.getElementById('a9').innerHTML = x;
+// Elementos da matriz podem ser objetos
 
-// Function Rest Parameter / Parâmetro de descanso de função
+// myArray[0] = Date.now;
+// myArray[1] = myFunction;
+// myArray[2] = myCars;
 
-// Array.find () O find()método retorna o valor do primeiro elemento da matriz que passa em uma função de teste.
+// Elementos da matriz podem ser objetos
 
-var numbers = [4, 9, 16, 25, 29];
-var first = numbers.find(myFunction2);
+// The length Property 
+/* A lengthpropriedade de uma matriz retorna o 
+comprimento de uma matriz (o número de elementos da 
+matriz).*/
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+fruits[4] = 'Maça';
+
+document.getElementById('a4').style.backgroundColor = 'green';
+document.getElementById('a4').style.color = 'white';
+document.getElementById('a4').innerHTML = fruits.length;
+
+// Acessando o Último Elemento de Matriz
+
+var last = fruits[fruits.length-1];
+document.getElementById('a5').style.backgroundColor = 'yellow';
+document.getElementById('a5').innerHTML = last;
 
 
-document.getElementById('a10').style.backgroundColor = 'gray';
-document.getElementById("a10").innerHTML = "First number over 18 is " + first;
+// The length Property
 
-function myFunction2(value, index, array) {
-  return value > 18;
+// Looping Array Elements
+
+// A maneira mais segura de fazer um loop em uma matriz 
+// é usando um forloop:
+
+fLen = fruits.length;
+
+text = "<ul>";
+for (i = 0; i < fLen; i++) {
+  text += "<li>" + fruits[i] + "</li>";
+}
+text += "</ul>";
+
+document.getElementById('a6').style.backgroundColor = 'black';
+document.getElementById('a6').style.color = 'white';
+document.getElementById('a6').style.height = 'auto';
+document.getElementById('a6').innerHTML = text;
+
+
+// Você também pode usar a Array.forEach()função:
+
+text = "<ul>";
+fruits.forEach(myFunction);
+text += "</ul>";
+
+document.getElementById('a7').style.backgroundColor = 'purple';
+document.getElementById('a7').style.color = 'white';
+document.getElementById('a7').style.height = 'auto';
+document.getElementById('a7').innerHTML = text;
+
+function myFunction(value) {
+  text += "<li>" + value + "</li>";
+} 
+
+// Adicionando Elementos de Matriz
+
+document.getElementById('a8').innerHTML = '<input type="submit" name="Enviar" onclick="myFunction2()">';
+function myFunction2() {
+  fruits.push("Lemon");
+
+  document.getElementById('a8').style.backgroundColor = 'skyblue';
+  document.getElementById('a8').style.color = 'black';
+  document.getElementById('a8').style.width = '340px';
+  document.getElementById("a8").innerHTML = '<h1 id="a8">' + fruits + '</h1>';
 }
 
-// Array.find () O find()método retorna o valor do primeiro elemento da matriz que passa em uma função de teste.
+// Novo elemento também pode ser adicionado a uma 
+// matriz usando a lengthpropriedade:
+document.getElementById('a9').innerHTML = '<input type="submit" name="Enviar" onclick="myFunction1()">';
+function myFunction1() {
+  fruits[fruits.length] = "CherryBerry";
+  document.getElementById('a9').innerHTML = fruits;
+}
 
-// Array.findIndex () método retorna o índice do primeiro elemento da matriz que passa em uma função de teste.
-
-var numbers1 = [4, 9, 16, 25, 29];
-var first = numbers1.findIndex(myFunction3);
+// Looping Array Elements
 
 
-document.getElementById('a11').style.backgroundColor = 'blue';
+// Como reconhecer uma matriz / typeof lhe diz
+document.getElementById('a10').style.backgroundColor = 'orange';
+document.getElementById('a10').style.color = 'black';
+document.getElementById('a10').innerHTML = typeof fruits;
+// Como reconhecer uma matriz / typeof lhe diz
+
+
+// Para resolver este problema, o ECMAScript 5 define
+// um novo método Array.isArray():
+
+document.getElementById('a11').style.backgroundColor = 'gray';
 document.getElementById('a11').style.color = 'white';
-document.getElementById('a11').innerHTML = "First number over 18 has index " + first;
+document.getElementById('a11').innerHTML = Array.isArray(fruits);
 
-function myFunction3(value, index, array) {
-  return value > 18;
+// método Array.isArray()
+
+
+//O problema com esta solução é que ECMAScript 5 não é 
+//compatível com navegadores mais antigos 
+
+document.getElementById('a12').style.backgroundColor = 'rgb(255,0,225)';
+document.getElementById('a12').style.color = 'white';
+document.getElementById('a12').innerHTML = isArray(fruits);
+
+function isArray(myArray) {
+  return myArray.constructor.toString().indexOf("Array") > -1;
 }
-// Array.findIndex () método retorna o índice do primeiro elemento da matriz que passa em uma função de teste.
 
-// New Number Properties / Novas propriedades de número EPSILON, MIN_SAFE_INTEGER, MAX_SAFE_INTEGER 
+// isArray()
 
-var  a1 = Number.EPSILON;
+//O instanceofoperador retorna verdadeiro se um objeto é 
+//criado por um determinado construtor:
 
-document.getElementById('a12').style.backgroundColor = 'orange';
-document.getElementById('a12').style.color = 'black';
-document.getElementById('a12').innerHTML = a1;
-
-
-var  a2 = Number.MIN_SAFE_INTEGER;
-
-document.getElementById('a13').style.backgroundColor = 'red';
+document.getElementById('a13').style.backgroundColor = 'rgb(255,35,105)';
 document.getElementById('a13').style.color = 'white';
-document.getElementById('a13').innerHTML = a2;
+document.getElementById('a13').innerHTML = fruits instanceof Array;
 
-
-var  a3 = Number.MAX_SAFE_INTEGER;
-
-document.getElementById('a14').style.backgroundColor = 'green';
-document.getElementById('a14').style.color = 'white';
-document.getElementById('a14').innerHTML = a3;
-
-// New Number Properties / Novas propriedades de número EPSILON, MIN_SAFE_INTEGER, MAX_SAFE_INTEGER
+////////////////////////////////////////////////////
