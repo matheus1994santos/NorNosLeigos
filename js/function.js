@@ -168,3 +168,27 @@ document.getElementById('a14').style.color = 'white';
 document.getElementById('a14').innerHTML = a3;
 
 // New Number Properties / Novas propriedades de número EPSILON, MIN_SAFE_INTEGER, MAX_SAFE_INTEGER
+
+// The Constructor Method / O Método do Construtor
+
+class aCar {
+  constructor(name0,year0) {
+    this.name0 = name0;
+    this.year0 = year0;
+  }
+
+  age() {
+    let date = new Date();
+    return date.getFullYear() - this.year0;
+  }
+
+  age1(x) {
+    return x - this.year0;
+  }
+}
+
+let myaCar = new aCar('Atlas', 1994);
+document.getElementById('a15').innerHTML = "My car is " + myaCar.age() + " years old.";
+
+// The Constructor Method / O Método do Construtor 
+
