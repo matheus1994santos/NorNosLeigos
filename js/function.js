@@ -177,4 +177,4 @@ document.getElementById('a13').style.backgroundColor = 'rgb(255,35,105)';
 document.getElementById('a13').style.color = 'white';
 document.getElementById('a13').innerHTML = fruits instanceof Array;
 
-////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
