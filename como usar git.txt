@@ -1,0 +1,16 @@
+git init -- inicia repositorio
+
+git status -- em vermelho o que nao foi enviado
+
+git add .
+
+git commit -m "nomeia o commit" qualquer nome.
+
+git remote add origin urldorepositorionogithub
+
+git push origin master
+
+
+git pull origin master --allow-unrelated-histories ---limpar o historico
+
+  nome
