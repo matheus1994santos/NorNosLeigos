@@ -1,39 +1,232 @@
-*{
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-}
-
+*{ padding: 0; margin: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
 
 /* Standard elements*/
 
-a{
-	color: black; text-decoration: none;
-}
+a{ color: black; text-decoration: none; }
 
 li{ list-style: none;}
 
-.clear{clear: both;}
+/* ----------------- Header -------------- */
 
-.container, #container{
-	max-width: 980px; padding: 0 2%; margin: 0 auto;
+header {
+     display: grid; grid-template-columns: 1fr 3fr 1fr ; 
+     background-color: #190B42;  border-radius: 12px 12px;
+      margin: 0; margin: 0 0.3%; }
+
+header ul.menu { display: flex;  flex-direction: column; }
+
+header ul.menu i { margin: auto 32px; color: cornsilk;font-size: 40px; cursor: pointer;}
+
+header div.outdoor { color: white; display: flex; }
+
+header div.outdoor div.ou1 { margin: 2px;  flex-grow: 1; height: 50px; }
+header div.outdoor div.ou2 { margin: 2px;  flex-grow: 1; height: 50px; }
+header div.outdoor div.ou3 { margin: 2px;  flex-grow: 1; height: 50px; }
+header div.outdoor div.ou4 { margin: 2px 0px;  flex-grow: 1; height: 50px; }
+
+header div.outdoor div.ou1 img {  width: 139px; margin: auto;  border: 3px solid black; cursor: pointer; height: 70px; }
+header div.outdoor div.ou2 img {  width: 139px; margin: auto;  border: 3px solid black; cursor: pointer; height: 70px; }
+header div.outdoor div.ou3 img {  width: 139px; margin: auto;  border: 3px solid black; cursor: pointer; height: 70px; }
+header div.outdoor div.ou4  { width: 79px; margin: auto;  border: 3px solid black; cursor: pointer; height: 70px; }
+header div.outdoor div.ou4 { 
+    background-image: url('../images/imagesclick/NorFerro.txt.gif'); background-size: cover; 
+    background-repeat: no-repeat; background-position: center;
+ }
+
+header div.logo { 
+    height: 72px; width: 250px; 
+    background-image: url('../images/logo/Nór\ Ciência.gif');
+    background-size: cover; background-position: center;
 }
 
-/*Section Header*/
+header div.logo h1{ margin: 12px 0; text-align: center; }
 
-section.header{
-	width: 100%;
-	min-height: 450px;
-	padding: 0 2%;
-	background: #09597e;
+/* ----------------- Header -------------- */
+
+/* ----------------- Grid1 -------------- */
+
+div.grid1{ 
+    display: grid; 
+    max-width: 100%;
+    margin: 0 2% 20px; 2%;
+    grid-template-areas: 
+    "banner banner banner " 
+    "sidebar sidebar sidebar "
+    "content content alert";
+    grid-template-columns: 0fr 8fr 2fr; 
+    
+ }
+
+ /* Banner */
+
+div.grid1 section.banner{  height: 232px;  grid-area: banner; /* border: 1px solid black;*/ margin: 0; }
+
+div.grid1 section.banner div{ border: 1px solid blanchedalmond; }
+
+/* Banner */
+
+/* sidebar */
+
+div.grid1 nav.sidebar{ 
+    flex-grow: 1; grid-area: sidebar; margin-bottom: 4px; 
+    /* border: 1px solid black; */  background-color: #4e3b86;
+    /* position: absolute; */ border-radius: 16px 18px;
+}
+div.grid1 nav.sidebar div.menu{ display: flex; margin: auto; align-items: center; }
+div.grid1 nav.sidebar div.menu h1{ margin-bottom: 20px; margin-top: 14px; margin-left: 16px; color: white; }
+div.grid1 nav.sidebar div.menu div{ 
+    margin:auto 98px;  width: 122px;
+    color: white; font-size: 1.3em;
+    text-align: center; cursor: pointer;
+ }
+
+div.grid1 nav.sidebar ul.menu li{  }
+
+/* sidebar */
+
+/* cont */
+
+div.grid1 div.cont{ 
+    grid-area: content; 
+    border: 1px solid black; border-radius: 18px 18px;
+    min-width: 327px;
+ }
+
+ div.grid1 div.cont article{ display: flex; flex-direction: column; }
+
+ div.grid1 div.cont article h2 { text-align: center; margin: 8px 0; }
+
+ div.grid1 div.cont article img { max-width: 320px; margin: auto; text-align: center}
+
+ div.grid1 div.cont article div{ margin: 4px }
+
+ div.grid1 div.cont article div p { margin: 2px auto; max-width: 400px; text-align: center; font-size: 1.3em; }
+
+/* cont */
+
+div.grid1 div.alert{ display: flex; flex-direction: column; grid-area: alert;}
+
+div.grid1 div.alert div.alert1{ 
+    background-color: #7a63bd; border: 1px solid black;  border-radius: 28px; 
+    height: 82px; margin: 0 2%; margin-bottom: 4px;
+ }
+div.grid1 div.alert div.alert2{ 
+    background-color: #7a63bd; border: 1px solid black;  border-radius: 28px; 
+    height: 82px; margin: 0 2%; margin-bottom: 4px;
+ }
+div.grid1 div.alert div.alert3{ 
+    background-color: #7a63bd; border: 1px solid black;  border-radius: 28px; 
+    height: 82px; margin: 0 2%; margin-bottom: 4px;
+ }
+div.grid1 div.alert div.alert4{ 
+    background-color: #7a63bd; border: 1px solid black;  border-radius: 28px; 
+    height: 82px; margin: 0 2%; margin-bottom: 4px;
+ }
+
+div.grid1 div.alert div.alert1 span{
+    display: inline-block;
+    margin:22px 78px;
+    width: 85px;
+    text-align: center;
+    cursor: pointer;
+    color: snow;
+    font-size: 18px;
+    font-weight: 400;
 }
 
-h1{
-	display: inline-block
-	-webkit-inline-box;
-	width: 160px;
-	height: 30px;
-	margin: 2px 0px 2px 4px;
-	font-size: 18px;
-	text-align: center;
+div.grid1 div.alert div.alert2 span{
+    display: inline-block;
+    width: 135px;
+    margin:30px 54px;
+    text-align: center;
+    cursor: pointer;
+    color: snow;
+    font-size: 18px;
+    font-weight: 400;
 }
+
+div.grid1 div.alert div.alert3 span{
+    display: inline-block;
+    width: 135px;
+    margin:30px 54px;
+    text-align: center;
+    cursor: pointer;
+    color: snow;
+    font-size: 18px;
+    font-weight: 400;
+}
+div.grid1 div.alert div.alert4 span{
+    display: inline-block;
+    width: 135px;
+    margin:30px 54px;
+    text-align: center;
+    cursor: pointer;
+    color: snow;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+/* ----------------- Content -------------- */
+
+/* ----------------- grid2 -------------- */
+
+div.grid2 { 
+    display: grid;
+    margin: 0 2%;
+  }
+
+div.grid2 div.header2 { border: 1px solid black; height: 80px; margin-bottom: 12px; 
+    border-radius: 16px 16px; align-items: center;
+}
+
+div.grid2 div.header2 h3 { margin: auto; text-align: center; margin-top: 27px; }
+
+div.grid2 div.content2 { border: 1px solid black; height: 480px; border-radius: 16px 16px; }
+
+div.grid2 div.content2{ display: flex; flex-direction: row; }
+
+div.grid2 div.content2 div.sidebar2 { flex-grow: 1; display: flex; flex-direction: column;}
+
+div.grid2 div.content2 div.sidebar2 div { display: flex; max-width: 200px; flex-grow: 2;  }
+
+div.grid2 div.content2 div.sidebar2 div h4 { margin: auto; cursor: pointer;}
+
+div.grid2 div.content2 div.display { border: 1px solid black; flex-grow: 3; display: flex; }
+
+div.grid2 div.content2 div.display div.tela { 
+    display: flex; width: 400px; height: 400px; 
+    background-color: black; margin: auto; flex-direction: column;
+    align-items: center;
+}
+
+div.grid2 div.content2 div.display div.tela span.titulo { color: snow; font-size: 1.5em; margin: auto; font-weight: bold; }
+
+div.grid2 div.content2 div.display div.tela span.simb { color: snow; font-size: 1.5em; margin: auto;}
+
+div.grid2 div.content2 div.display div.tela input.btn-res{ 
+    background-color: silver;  margin: auto; font-size: 1.6em;
+    width: 170px; height: 40px;  font-weight: 700; text-align: center;
+    border-radius: 16px 16px; color: snow;
+    cursor: pointer; outline: none;
+ }
+
+div.grid2 div.content2 div.display div.tela span.print { 
+    color: black; font-size: 1.5em;
+    margin: auto auto 30px auto; min-width: 170px; height: 30px; 
+    border: 1px solid white; text-align: center;
+    font-weight: bold; color: snow;
+    border-radius: 16px 16px;
+ }
+
+div.grid2 div.content2 div.display div.tela input[type=text]{  
+    width: 170px; height: 40px; 
+    text-align: center; 
+    border-radius: 16px 16px;
+    border: none;
+    outline: none;
+}
+
+div.grid2 div.content2 div.formula { flex-grow: 1; }
+
+/* ----------------- grid2 -------------- */
