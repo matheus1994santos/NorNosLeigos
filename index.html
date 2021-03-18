@@ -74,27 +74,54 @@
 		</div><!-- header2 -->
 		<div class="content2">
 			<div class="sidebar2">
-			<div><h4>Tensão</h4></div>
-			<div><h4>Corrente</h4></div>
-			<div><h4>Potencia</h4></div>
-			<div><h4>Impedância</h4></div>
-			<div><h4>Transistores</h4></div>
-			<div><h4>capacitancia</h4></div>
-			<div><h4>R.Materiais</h4></div>
+				<div><h4 id="btn-tensao">Tensão</h4></div>
+				<div><h4 id="btn-corrente">Corrente</h4></div>
+				<div><h4 id="btn-Resistencia">Resistencia</h4></div>
+				<div><h4 id="btn-Pot-tot">Potencia</h4></div>
+				<div><h4 id="btn-Impedancia">Impedância</h4></div>
+				<div><h4 id="btn-Transistor">Transistores</h4></div>
+				<div><h4 id="btn-Capacitancia">capacitancia</h4></div>
+				<div><h4 id="btn-Res-materiais">R.Materiais</h4></div>
 			</div><!-- sidebar2 -->
 
 			<div class="display">
 				<div id="tela" class="tela">
 					<span class="titulo"> Tensão </span><!-- titulo -->
-					<input type="text" name="Resistência" id="r-ohm">
+					<input type="text" name="Resistência" id="r-ohm0" placeholder="Resistencia em Ohm">
 					<span class="simb"> x </span>
-					<input type="text" name="Corrente" id="a-amp">
-					<input type="submit" value="=" id="btn-res" class="btn-res">
-					<span id="print" class="print"></span>
+					<input type="text" name="Corrente" id="a-amp0" placeholder="Corrente em Ampere">
+					<input type="submit" value="=" id="btn-res0" class="btn-res">
+					<span id="print0" class="print"></span>
 				</div><!-- tela -->
+
+				<div id="tela1" class="tela1">
+					<span class="titulo"> Corrente </span>
+					<input type="text" name="Tensão" id="r-volts0" placeholder="Tensão em volts">
+					<span class="simb"> / </span>
+					<input type="text" name="Resistência" id="r-ohm1" placeholder="Resistencia em Ohm">
+					<input type="submit" value="=" id="btn-res1" class="btn-res">
+					<span id="print1" class="print"></span>
+				</div>
+
+				<div id="tela2" class="tela2">
+					<span class="titulo"> Resistência </span>
+					<input type="text" name="Tensão" id="r-volts1" placeholder="Tensão em volts">
+					<span class="simb"> / </span>
+					<input type="text" name="Corrente" id="a-amp1" placeholder="Corrente em Ampere">
+					<input type="submit" value="=" id="btn-res2" class="btn-res">
+					<span id="print2" class="print"></span>
+				</div>
 			</div><!-- display -->
 
-			<div class="formula"></div><!-- formula -->
+			<div class="formula">
+				<div><h4>Tensão</h4></div>
+				<div><h4>Corrente</h4></div>
+				<div><h4>Potencia</h4></div>
+				<div><h4>Impedância</h4></div>
+				<div><h4>Transistores</h4></div>
+				<div><h4>capacitancia</h4></div>
+				<div><h4>R.Materiais</h4></div>
+			</div><!-- formula -->
 		</div><!-- content2 -->
 	</div><!--grid2-->
 
