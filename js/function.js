@@ -10,7 +10,7 @@ var tela = [
         Volt1:parseFloat(document.getElementById('r-volts1').value) } },
     document.getElementById('print1'),
     document.getElementById('print2')
-];
+]; // array que colhem e printam informações na tela;
 
 var btnComando = [
     document.getElementById('btn-res0'),
@@ -24,41 +24,7 @@ var btnComando = [
     document.getElementById('btn-Transistor'),
     document.getElementById('btn-Capacitancia'),
     document.getElementById('btn-Res-materiais')
-]
-
-btnComando[0].addEventListener('click', function(){
-    return calcFisica.Tensao();
-
-})
-
-btnComando[1].addEventListener('click', function(){
-    return calcFisica.Corrente();
-
-});
-
-btnComando[2].addEventListener('click', function(){
-    return calcFisica.Resistencia();
-
-});
-
-btnComando[3].addEventListener('click', function(){ 
-    document.getElementById('tela').setAttribute('style', 'display: flex');
-    document.getElementById('tela1').setAttribute('style', 'display: none');
-    document.getElementById('tela2').setAttribute('style', 'display: none');
-});
-
-btnComando[4].addEventListener('click', function(){
-    document.getElementById('tela1').setAttribute('style', 'display: flex');
-    document.getElementById('tela').setAttribute('style', 'display: none');
-    document.getElementById('tela2').setAttribute('style', 'display: none'); 
-});
-
-btnComando[5].addEventListener('click', function(){
-    document.getElementById('tela2').setAttribute('style', 'display: flex');
-    document.getElementById('tela').setAttribute('style', 'display: none');
-    document.getElementById('tela1').setAttribute('style', 'display: none');
-});
-
+]; // array com botoes;
 
 var calcFisica = { 
 
@@ -131,7 +97,40 @@ var calcFisica = {
         return tela[0].innerHTML = x;
     }
 
-}
+} // Objeto com Metodos de Formulas eletricas;
+
+btnComando[0].addEventListener('click', function(){
+    return calcFisica.Tensao();
+}) // Botão com metodo Tensão;
+
+btnComando[1].addEventListener('click', function(){
+    return calcFisica.Corrente();
+}); // Botão com metodo Corrente;
+
+btnComando[2].addEventListener('click', function(){
+    return calcFisica.Resistencia();
+}); // Botão com metodo Corrente;
+
+btnComando[3].addEventListener('click', function(){ 
+    document.getElementById('tela').setAttribute('style', 'display: flex');
+    document.getElementById('tela1').setAttribute('style', 'display: none');
+    document.getElementById('tela2').setAttribute('style', 'display: none');
+});// Botão da formula tensão;
+
+btnComando[4].addEventListener('click', function(){
+    document.getElementById('tela1').setAttribute('style', 'display: flex');
+    document.getElementById('tela').setAttribute('style', 'display: none');
+    document.getElementById('tela2').setAttribute('style', 'display: none'); 
+});// Botão da formula Corrente;
+
+btnComando[5].addEventListener('click', function(){
+    document.getElementById('tela2').setAttribute('style', 'display: flex');
+    document.getElementById('tela').setAttribute('style', 'display: none');
+    document.getElementById('tela1').setAttribute('style', 'display: none');
+});// Botão da formula Resistencia;
+
+
+
 
 
 
