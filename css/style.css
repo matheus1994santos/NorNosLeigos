@@ -169,24 +169,27 @@ div.grid1 div.alert div.alert4 span{
 
 /* ----------------- Content -------------- */
 
-/* ----------------- grid2 -------------- */
+/* ---------------------------------------------------------  grid2 ----------------------------------------- -------------- */
 
 div.grid2 { 
     display: grid;
-    margin: 0 2%;
+    margin: 0px 2%;
+    height: 580px;
   }
 
   /* ----- header ----- */
 
-div.grid2 div.header2 { border: 1px solid black; height: 80px; margin-bottom: 12px; 
-    border-radius: 16px 16px; align-items: center;
+div.grid2 div.header2 {  
+    height: 80px; margin-bottom: 12px; 
+    border-radius: 16px 16px; align-items: center; border: 1px solid black;
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 20%, rgba(0,212,255,1) 100%);
 }
 
-div.grid2 div.header2 h3 { margin: auto; text-align: center; margin-top: 27px; }
+div.grid2 div.header2 h3 { margin: auto; text-align: center; margin-top: 27px; color: snow; }
 
  /* ----- header ----- */
 
-div.grid2 div.content2 { border: 1px solid black; height: 480px; border-radius: 16px 16px; }
+div.grid2 div.content2 { height: 480px; border-radius: 16px 16px; }
 
 div.grid2 div.content2{ display: flex; flex-direction: row; }
 
@@ -194,7 +197,11 @@ div.grid2 div.content2{ display: flex; flex-direction: row; }
 
 div.grid2 div.content2 div.sidebar2 { flex-grow: 1; display: flex; flex-direction: column; align-items: center; }
 
-div.grid2 div.content2 div.sidebar2 div { display: flex; max-width: 200px; flex-grow: 2;  }
+div.grid2 div.content2 div.sidebar2 div { 
+    display: flex; width: 100px; flex-grow: 2; 
+    margin: 4px; border-radius: 21px 21px; 
+    background: linear-gradient(0deg, rgba(181,178,173,1) 20%, rgba(212,219,219,1) 68%);
+ }
 
 div.grid2 div.content2 div.sidebar2 div h4 { margin: auto; cursor: pointer;}
 
@@ -202,22 +209,29 @@ div.grid2 div.content2 div.sidebar2 div h4 { margin: auto; cursor: pointer;}
 
 /* -----content2 display ----- */
 
-div.grid2 div.content2 div.display { border: 1px solid black; flex-grow: 3; display: flex; }
+div.grid2 div.content2 div.display { 
+    border-radius: 19px 19px; flex-grow: 3; display: flex;
+    background: url('../images/background/back-calcfs.png');
+}
 
 div.grid2 div.content2 div.display div.tela { 
     display: flex; width: 400px; height: 400px; 
-    background-color: black; margin: auto; flex-direction: column;
+    background-color: white; margin: auto; flex-direction: column;
     align-items: center; border-radius: 22px 22px;
 }
 
-div.grid2 div.content2 div.display div.tela span.titulo { color: snow; font-size: 1.5em; margin: auto; font-weight: bold; }
+div.grid2 div.content2 div.display div.tela span.titulo { font-size: 1.5em; margin: auto; font-weight: bold; }
 
-div.grid2 div.content2 div.display div.tela span.simb { color: snow; font-size: 1.5em; margin: auto;}
+div.grid2 div.content2 div.display div.tela span.simb {  font-size: 1.5em; margin: auto;}
 
 div.grid2 div.content2 div.display div.tela input.btn-res{ 
-    background-color: silver;  margin: auto; font-size: 1.6em;
+    background: linear-gradient(0deg, rgba(181,178,173,1) 4%,
+            rgba(211,218,217,1) 41%, rgba(215,224,224,1) 49%,
+             rgba(212,219,219,1) 61%);  
+    margin: auto; font-size: 1.6em;
     width: 170px; height: 40px;  font-weight: 700; text-align: center;
-    border-radius: 16px 16px; color: snow;
+    border-radius: 16px 16px;
+    border: 1px solid #ccc;
     cursor: pointer; outline: none;
  }
 
@@ -225,15 +239,15 @@ div.grid2 div.content2 div.display div.tela span.print {
     color: black; font-size: 1.5em;
     margin: auto auto 30px auto; min-width: 170px; height: 30px; 
     border: 1px solid white; text-align: center;
-    font-weight: bold; color: snow;
-    border-radius: 16px 16px;
+    font-weight: bold;
+    border-radius: 16px 16px; border: 1px solid #ccc;
  }
 
 div.grid2 div.content2 div.display div.tela input[type=text]{  
     width: 170px; height: 40px; 
     text-align: center; 
     border-radius: 16px 16px;
-    border: none;
+    border: 1px solid #ccc;
     outline: none;
 }
 
@@ -328,3 +342,18 @@ div.grid2 div.content2 div.formula div h4 { margin: auto; cursor: pointer;}
 /* -----content2 formula ----- */
 
 /* ----------------- grid2 -------------- */
+
+
+
+footer { display: grid; grid-template-columns: 2fr 1fr; height: 240px; margin-top: 12px; }
+
+footer .tela1 { background-color: aqua; border: 1px solid black; border-radius: 22px 22px; }
+
+footer .tela2 { 
+    display: flex;  flex-direction: column;
+    border: 1px solid black; border-radius: 22px 22px;
+}
+footer .tela2 h2 { text-align: center; margin: auto; }
+footer .tela2 nav { display: flex; flex-direction: column; width: 280px; height: 150px; margin: auto; }
+footer .tela2 nav a { margin: auto; font-size: 21px; }
+footer .tela2 nav a i { font-size: 21px;  }
