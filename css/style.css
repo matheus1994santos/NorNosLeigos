@@ -300,6 +300,197 @@ div.grid1-1 div.content2 div.display div.tela2 input[type=text]{
     outline: none;}
     /* tela2 */
 
+    /* tela3 */
+div.grid1-1 div.content2 div.display div.tela3{ 
+    display: flex; width: 400px; height: 400px; 
+    background-color: #ccc; margin: auto; flex-direction: column;
+    align-items: center; border-radius: 22px 22px;}
+div.grid1-1 div.content2 div.display div.tela3{ display: none; }
+div.grid1-1 div.content2 div.display div.tela3 span.titulo { color: snow; font-size: 1.5em; margin: auto; font-weight: bold; }
+div.grid1-1 div.content2 div.display div.tela3 span.simb { color: snow; font-size: 1.5em; margin: auto;}
+div.grid1-1 div.content2 div.display div.tela3 input.btn-res{ 
+    background-color: silver;  margin: auto; font-size: 1.6em;
+    width: 170px; height: 40px;  font-weight: 700; text-align: center;
+    border-radius: 16px 16px; color: snow;
+    cursor: pointer; outline: none;}
+div.grid1-1 div.content2 div.display div.tela3 span.print { 
+    color: black; font-size: 1.5em;
+    margin: auto auto 30px auto; min-width: 170px; height: 30px; 
+    border: 1px solid white; text-align: center;
+    font-weight: bold; color: snow;
+    border-radius: 16px 16px;}
+div.grid1-1 div.content2 div.display div.tela3 input[type=text]{  
+    width: 170px; height: 40px; 
+    text-align: center; 
+    border-radius: 16px 16px;
+    border: none;
+    outline: none;}
+    /* tela3 */
+
+    /* tela4 */
+div.grid1-1 div.content2 div.display div.tela4 { 
+    display: flex; width: 400px; height: 400px; 
+    background-color: purple; margin: auto; flex-direction: column;
+    align-items: center; border-radius: 22px 22px;}
+div.grid1-1 div.content2 div.display div.tela4 { display: none; }
+div.grid1-1 div.content2 div.display div.tela4 span.titulo { color: snow; font-size: 1.5em; margin: auto; font-weight: bold; }
+div.grid1-1 div.content2 div.display div.tela4 span.simb { color: snow; font-size: 1.5em; margin: auto;}
+div.grid1-1 div.content2 div.display div.tela4 input.btn-res{ 
+    background-color: silver;  margin: auto; font-size: 1.6em;
+    width: 170px; height: 40px;  font-weight: 700; text-align: center;
+    border-radius: 16px 16px; color: snow;
+    cursor: pointer; outline: none;}
+div.grid1-1 div.content2 div.display div.tela4 span.print { 
+    color: black; font-size: 1.5em;
+    margin: auto auto 30px auto; min-width: 170px; height: 30px; 
+    border: 1px solid white; text-align: center;
+    font-weight: bold; color: snow;
+    border-radius: 16px 16px;}
+div.grid1-1 div.content2 div.display div.tela4 input[type=text]{  
+    width: 170px; height: 40px; 
+    text-align: center; 
+    border-radius: 16px 16px;
+    border: none;
+    outline: none;}
+    /* tela4 */
+
+    /* tela5 */
+div.grid1-1 div.content2 div.display div.tela5 { 
+    display: flex; width: 400px; height: 400px; 
+    background-color: brown; margin: auto; flex-direction: column;
+    align-items: center; border-radius: 22px 22px;}
+div.grid1-1 div.content2 div.display div.tela5 { display: none; }
+div.grid1-1 div.content2 div.display div.tela5 span.titulo { color: snow; font-size: 1.5em; margin: auto; font-weight: bold; }
+div.grid1-1 div.content2 div.display div.tela5 span.simb { color: snow; font-size: 1.5em; margin: auto;}
+div.grid1-1 div.content2 div.display div.tela5 input.btn-res{ 
+    background-color: silver;  margin: auto; font-size: 1.6em;
+    width: 170px; height: 40px;  font-weight: 700; text-align: center;
+    border-radius: 16px 16px; color: snow;
+    cursor: pointer; outline: none;}
+div.grid1-1 div.content2 div.display div.tela5 span.print { 
+    color: black; font-size: 1.5em;
+    margin: auto auto 30px auto; min-width: 170px; height: 30px; 
+    border: 1px solid white; text-align: center;
+    font-weight: bold; color: snow;
+    border-radius: 16px 16px;}
+div.grid1-1 div.content2 div.display div.tela5 input[type=text]{  
+    width: 170px; height: 40px; 
+    text-align: center; 
+    border-radius: 16px 16px;
+    border: none;
+    outline: none;}
+    /* tela5 */
+
+    /* tela6 */
+div.grid1-1 div.content2 div.display div.tela6 { 
+    display: flex; width: 400px; height: 400px; 
+    background-color: pink; margin: auto; flex-direction: column;
+    align-items: center; border-radius: 22px 22px;}
+div.grid1-1 div.content2 div.display div.tela6 { display: none; }
+div.grid1-1 div.content2 div.display div.tela6 span.titulo { color: snow; font-size: 1.5em; margin: auto; font-weight: bold; }
+div.grid1-1 div.content2 div.display div.tela6 span.simb { color: snow; font-size: 1.5em; margin: auto;}
+div.grid1-1 div.content2 div.display div.tela6 input.btn-res{ 
+    background-color: silver;  margin: auto; font-size: 1.6em;
+    width: 170px; height: 40px;  font-weight: 700; text-align: center;
+    border-radius: 16px 16px; color: snow;
+    cursor: pointer; outline: none;}
+div.grid1-1 div.content2 div.display div.tela6 span.print { 
+    color: black; font-size: 1.5em;
+    margin: auto auto 30px auto; min-width: 170px; height: 30px; 
+    border: 1px solid white; text-align: center;
+    font-weight: bold; color: snow;
+    border-radius: 16px 16px;}
+div.grid1-1 div.content2 div.display div.tela6 input[type=text]{  
+    width: 170px; height: 40px; 
+    text-align: center; 
+    border-radius: 16px 16px;
+    border: none;
+    outline: none;}
+    /* tela6 */
+
+    /* tela7 */
+div.grid1-1 div.content2 div.display div.tela7 { 
+    display: flex; width: 400px; height: 400px; 
+    background-color: skyblue; margin: auto; flex-direction: column;
+    align-items: center; border-radius: 22px 22px;}
+div.grid1-1 div.content2 div.display div.tela7 { display: none; }
+div.grid1-1 div.content2 div.display div.tela7 span.titulo { color: snow; font-size: 1.5em; margin: auto; font-weight: bold; }
+div.grid1-1 div.content2 div.display div.tela7 span.simb { color: snow; font-size: 1.5em; margin: auto;}
+div.grid1-1 div.content2 div.display div.tela7 input.btn-res{ 
+    background-color: silver;  margin: auto; font-size: 1.6em;
+    width: 170px; height: 40px;  font-weight: 700; text-align: center;
+    border-radius: 16px 16px; color: snow;
+    cursor: pointer; outline: none;}
+div.grid1-1 div.content2 div.display div.tela7 span.print { 
+    color: black; font-size: 1.5em;
+    margin: auto auto 30px auto; min-width: 170px; height: 30px; 
+    border: 1px solid white; text-align: center;
+    font-weight: bold; color: snow;
+    border-radius: 16px 16px;}
+div.grid1-1 div.content2 div.display div.tela7 input[type=text]{  
+    width: 170px; height: 40px; 
+    text-align: center; 
+    border-radius: 16px 16px;
+    border: none;
+    outline: none;}
+    /* tela7 */
+
+    /* tela7 */
+div.grid1-1 div.content2 div.display div.tela7 { 
+    display: flex; width: 400px; height: 400px; 
+    background-color: lawngreen; margin: auto; flex-direction: column;
+    align-items: center; border-radius: 22px 22px;}
+div.grid1-1 div.content2 div.display div.tela7 { display: none; }
+div.grid1-1 div.content2 div.display div.tela7 span.titulo { color: snow; font-size: 1.5em; margin: auto; font-weight: bold; }
+div.grid1-1 div.content2 div.display div.tela7 span.simb { color: snow; font-size: 1.5em; margin: auto;}
+div.grid1-1 div.content2 div.display div.tela7 input.btn-res{ 
+    background-color: silver;  margin: auto; font-size: 1.6em;
+    width: 170px; height: 40px;  font-weight: 700; text-align: center;
+    border-radius: 16px 16px; color: snow;
+    cursor: pointer; outline: none;}
+div.grid1-1 div.content2 div.display div.tela7 span.print { 
+    color: black; font-size: 1.5em;
+    margin: auto auto 30px auto; min-width: 170px; height: 30px; 
+    border: 1px solid white; text-align: center;
+    font-weight: bold; color: snow;
+    border-radius: 16px 16px;}
+div.grid1-1 div.content2 div.display div.tela7 input[type=text]{  
+    width: 170px; height: 40px; 
+    text-align: center; 
+    border-radius: 16px 16px;
+    border: none;
+    outline: none;}
+    /* tela7 */
+
+    /* tela8 */
+div.grid1-1 div.content2 div.display div.tela8 { 
+    display: flex; width: 400px; height: 400px; 
+    background-color: green; margin: auto; flex-direction: column;
+    align-items: center; border-radius: 22px 22px;}
+div.grid1-1 div.content2 div.display div.tela8 { display: none; }
+div.grid1-1 div.content2 div.display div.tela8 span.titulo { color: snow; font-size: 1.5em; margin: auto; font-weight: bold; }
+div.grid1-1 div.content2 div.display div.tela8 span.simb { color: snow; font-size: 1.5em; margin: auto;}
+div.grid1-1 div.content2 div.display div.tela8 input.btn-res{ 
+    background-color: silver;  margin: auto; font-size: 1.6em;
+    width: 170px; height: 40px;  font-weight: 700; text-align: center;
+    border-radius: 16px 16px; color: snow;
+    cursor: pointer; outline: none;}
+div.grid1-1 div.content2 div.display div.tela8 span.print { 
+    color: black; font-size: 1.5em;
+    margin: auto auto 30px auto; min-width: 170px; height: 30px; 
+    border: 1px solid white; text-align: center;
+    font-weight: bold; color: snow;
+    border-radius: 16px 16px;}
+div.grid1-1 div.content2 div.display div.tela8 input[type=text]{  
+    width: 170px; height: 40px; 
+    text-align: center; 
+    border-radius: 16px 16px;
+    border: none;
+    outline: none;}
+    /* tela8 */
+
+
+
 div.grid1-1 div.content2 div.formula { flex-grow: 1; display: flex; flex-direction: column; align-items: center;}
 div.grid1-1 div.content2 div.formula div { 
     display: flex; width: 120px; flex-grow: 2;
