@@ -74,43 +74,62 @@ div.grid1 section.banner div{
 /* sidebar */
 div.grid1 nav.sidebar{ 
     flex-grow: 1; grid-area: sidebar; margin-bottom: 4px; 
-    /* border: 1px solid black; */  background: linear-gradient(0deg, rgba(78,59,134,1) 20%, rgba(94,78,139,1) 45%);
-    /* position: absolute; */ border-radius: 16px 18px;
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 20%, rgba(0,212,255,1) 100%);
+    border-radius: 16px 18px; height: 35px;
 }
-div.grid1 nav.sidebar div.menu{ display: flex; margin: auto; align-items: center; }
+div.grid1 nav.sidebar div.menu{ display: flex; margin: auto; align-items: center; position: relative;  }
+div.grid1 nav.sidebar div.menu i.select {
+     position: absolute; top: 8px; left: 18px; font-size: 1.2em; color: white;
+    cursor: pointer; }
+div.grid1 nav.sidebar div.menu nav.menu-side { 
+    display: flex; flex-direction: column;
+    position: absolute; top: 30px;
+    display: none;
+}
+div.grid1 nav.sidebar div.menu nav.menu-side a {
+     height: 20px; border: 1px solid black; text-align: center; font-size: 1.0em}
 div.grid1 nav.sidebar div.menu h1{ margin-bottom: 20px; margin-top: 14px; margin-left: 16px; color: white; }
 div.grid1 nav.sidebar div.menu div{ 
-    margin:auto 80px;  
-    color: white; font-size: 1.3em;
+    margin: 3px auto;  
+    color: white; font-size: 1.5em; font-weight: 600;
     text-align: center; cursor: pointer;}
 /* sidebar */
 
 /* cont */
 div.grid1 div.cont{ 
+    display: flex; flex-direction: column; align-items: center;
     grid-area: content; 
     border: 1px solid black; border-radius: 18px 18px;
     min-width: 327px; height: 500px;}
+div.grid1 div.cont h2 { margin: auto; }
+div.grid1 div.cont h5 { margin: auto; }
+div.grid1 div.cont div.tela { text-align: center; }
+div.grid1 div.cont div.tela img { height: 320px; }
+div.grid1 div.cont p { text-align: justify; margin: 8px 50px; }
+div.grid1 div.cont div.btn-select {  }
+div.grid1 div.cont div.btn-select span{ font-size: 1.3em; }
+div.grid1 div.cont div.btn-select i { font-size: 1.2em; }
 /* cont */
 
 /* alert */
 div.grid1 div.alert{ display: flex; flex-direction: column; grid-area: alert; height: 344px; margin-top: 10px;}
 div.grid1 div.alert div.alert1{ 
-    background: linear-gradient(0deg, rgba(110,81,195,1) 27%, rgba(95,68,175,1) 65%);   
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 20%, rgba(0,212,255,1) 100%);   
     border: 1px solid black;  border-radius: 28px; 
     height: 82px; margin: 0 2%; margin-bottom: 4px;
  }
 div.grid1 div.alert div.alert2{ 
-    background: linear-gradient(0deg, rgba(110,81,195,1) 27%, rgba(95,68,175,1) 65%); 
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 20%, rgba(0,212,255,1) 100%); 
     border: 1px solid black;  border-radius: 28px; 
     height: 82px; margin: 0 2%; margin-bottom: 4px;
  }
 div.grid1 div.alert div.alert3{ 
-    background: linear-gradient(0deg, rgba(110,81,195,1) 27%, rgba(95,68,175,1) 65%); 
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 20%, rgba(0,212,255,1) 100%); 
     border: 1px solid black;  border-radius: 28px; 
     height: 82px; margin: 0 2%; margin-bottom: 4px;
  }
 div.grid1 div.alert div.alert4{ 
-    background: linear-gradient(0deg, rgba(110,81,195,1) 27%, rgba(95,68,175,1) 65%); 
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 20%, rgba(0,212,255,1) 100%); 
     border: 1px solid black;  border-radius: 28px; 
     height: 82px; margin: 0 2%; margin-bottom: 4px;
  }
@@ -137,7 +156,7 @@ div.grid1 div.alert div.alert2 span{
 div.grid1 div.alert div.alert3 span{
     display: inline-block;
     width: 135px;
-    margin:30px 54px;
+    margin:22px 54px;
     text-align: center;
     cursor: pointer;
     color: snow;
@@ -331,7 +350,7 @@ div.grid2 div.cont{
 div.grid2 div.cont article{ display: flex; flex-direction: column; }
 div.grid2 div.cont article h2 { text-align: center; margin: 8px 0; }
 div.grid2 div.cont article img { max-width: 320px; margin: auto; text-align: center}
-div.grid2 div.cont article div{ margin: 4px }
+div.grid2 div.cont article div { margin: 4px; }
 div.grid2 div.cont article div p { margin: 2px auto; max-width: 400px; text-align: center; font-size: 1.3em; }
         /* cont */
 
@@ -750,7 +769,12 @@ div.grid4-1 div.content3 div.display div.tela2{ display: none; }
 footer { display: grid; grid-template-columns: 2fr 1fr; height: 240px; margin-top: 12px; }
 
 
-footer .tela1 { background-color: aqua; border: 1px solid black; border-radius: 22px 22px; }
+footer div.tela1 {
+    display: flex; flex-direction: column;
+    border: 1px solid black; border-radius: 22px 22px;}
+footer div.tela1 h1 { margin: auto; }
+footer div.tela1 h3 { margin: auto; }
+
 footer .tela2 { 
     display: flex;  flex-direction: column;
     border: 1px solid black; border-radius: 22px 22px;}
