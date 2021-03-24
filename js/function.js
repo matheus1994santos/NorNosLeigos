@@ -7,9 +7,25 @@ var tela = [
         Volt0:parseFloat(document.getElementById('r-volts0').value),
         Ohm1:parseFloat(document.getElementById('r-ohm1').value), 
         Amp1:parseFloat(document.getElementById('a-amp1').value),
-        Volt1:parseFloat(document.getElementById('r-volts1').value) } },
+        Volt1:parseFloat(document.getElementById('r-volts1').value),
+        Volt2:parseFloat(document.getElementById('r-volts2').value),
+        Volt3:parseFloat(document.getElementById('r-volts3').value),
+        Volt4:parseFloat(document.getElementById('r-volts4').value),
+        con0:parseFloat(document.getElementById('a-con0').value),
+        sen0:parseFloat(document.getElementById('a-sen0').value),
+        Amp2:parseFloat(document.getElementById('a-amp2').value),
+        Amp3:parseFloat(document.getElementById('a-amp3').value),
+        Amp4:parseFloat(document.getElementById('a-amp4').value),
+        Amp5:parseFloat(document.getElementById('a-amp5').value) } },
     document.getElementById('print1'),
-    document.getElementById('print2')
+    document.getElementById('print2'),
+    document.getElementById('print3'),
+    document.getElementById('print4'),
+    document.getElementById('print5'),
+    document.getElementById('print6'),
+    document.getElementById('print7'),
+    document.getElementById('print8'),
+    document.getElementById('print9')
 ]; // array que colhem e printam informações na tela;
 
 var btnComando = [
@@ -23,9 +39,16 @@ var btnComando = [
     document.getElementById('btn-Pot-rtv'),
     document.getElementById('btn-Pot-apt'),
     document.getElementById('btn-Transistor'),
-    document.getElementById('btn-Impedancia'),
     document.getElementById('btn-Capacitancia'),
-    document.getElementById('btn-Res-materiais')
+    document.getElementById('btn-Impedancia'),
+    document.getElementById('btn-Res-materiais'),
+    document.getElementById('btn-res3'),
+    document.getElementById('btn-res4'),
+    document.getElementById('btn-res5'),
+    document.getElementById('btn-res6'),
+    document.getElementById('btn-res7'),
+    document.getElementById('btn-res8'),
+    document.getElementById('btn-res9')
 ]; // array com botoes;
 
 // ------------------------- Calculos Fisicos --------------------- //
@@ -125,6 +148,7 @@ btnComando[3].addEventListener('click', function(){
     document.getElementById('tela6').setAttribute('style', 'display: none');
     document.getElementById('tela7').setAttribute('style', 'display: none');
     document.getElementById('tela8').setAttribute('style', 'display: none');
+    document.getElementById('tela9').setAttribute('style', 'display: none');
 });// Botão da formula tensão;
 
 btnComando[4].addEventListener('click', function(){
@@ -137,6 +161,7 @@ btnComando[4].addEventListener('click', function(){
     document.getElementById('tela6').setAttribute('style', 'display: none');
     document.getElementById('tela7').setAttribute('style', 'display: none');
     document.getElementById('tela8').setAttribute('style', 'display: none');
+    document.getElementById('tela9').setAttribute('style', 'display: none');
 });// Botão da formula Corrente;
 
 btnComando[5].addEventListener('click', function(){
@@ -149,21 +174,10 @@ btnComando[5].addEventListener('click', function(){
     document.getElementById('tela6').setAttribute('style', 'display: none');
     document.getElementById('tela7').setAttribute('style', 'display: none');
     document.getElementById('tela8').setAttribute('style', 'display: none');
+    document.getElementById('tela9').setAttribute('style', 'display: none');
 });// Botão da formula Resistencia;
 
 btnComando[6].addEventListener('click', function(){
-    document.getElementById('tela').setAttribute('style', 'display: none');
-    document.getElementById('tela1').setAttribute('style', 'display: none');
-    document.getElementById('tela2').setAttribute('style', 'display: flex');
-    document.getElementById('tela3').setAttribute('style', 'display: none');
-    document.getElementById('tela4').setAttribute('style', 'display: none');
-    document.getElementById('tela5').setAttribute('style', 'display: none');
-    document.getElementById('tela6').setAttribute('style', 'display: none');
-    document.getElementById('tela7').setAttribute('style', 'display: none');
-    document.getElementById('tela8').setAttribute('style', 'display: none');
-});// Botão da formula Resistencia;
-
-btnComando[7].addEventListener('click', function(){
     document.getElementById('tela').setAttribute('style', 'display: none');
     document.getElementById('tela1').setAttribute('style', 'display: none');
     document.getElementById('tela2').setAttribute('style', 'display: none');
@@ -173,9 +187,10 @@ btnComando[7].addEventListener('click', function(){
     document.getElementById('tela6').setAttribute('style', 'display: none');
     document.getElementById('tela7').setAttribute('style', 'display: none');
     document.getElementById('tela8').setAttribute('style', 'display: none');
+    document.getElementById('tela9').setAttribute('style', 'display: none');
 });// Botão da formula Resistencia;
 
-btnComando[8].addEventListener('click', function(){
+btnComando[7].addEventListener('click', function(){
     document.getElementById('tela').setAttribute('style', 'display: none');
     document.getElementById('tela1').setAttribute('style', 'display: none');
     document.getElementById('tela2').setAttribute('style', 'display: none');
@@ -185,9 +200,10 @@ btnComando[8].addEventListener('click', function(){
     document.getElementById('tela6').setAttribute('style', 'display: none');
     document.getElementById('tela7').setAttribute('style', 'display: none');
     document.getElementById('tela8').setAttribute('style', 'display: none');
+    document.getElementById('tela9').setAttribute('style', 'display: none');
 });// Botão da formula Resistencia;
 
-btnComando[9].addEventListener('click', function(){
+btnComando[8].addEventListener('click', function(){
     document.getElementById('tela').setAttribute('style', 'display: none');
     document.getElementById('tela1').setAttribute('style', 'display: none');
     document.getElementById('tela2').setAttribute('style', 'display: none');
@@ -197,9 +213,10 @@ btnComando[9].addEventListener('click', function(){
     document.getElementById('tela6').setAttribute('style', 'display: none');
     document.getElementById('tela7').setAttribute('style', 'display: none');
     document.getElementById('tela8').setAttribute('style', 'display: none');
+    document.getElementById('tela9').setAttribute('style', 'display: none');
 });// Botão da formula Resistencia;
 
-btnComando[10].addEventListener('click', function(){
+btnComando[9].addEventListener('click', function(){
     document.getElementById('tela').setAttribute('style', 'display: none');
     document.getElementById('tela1').setAttribute('style', 'display: none');
     document.getElementById('tela2').setAttribute('style', 'display: none');
@@ -209,6 +226,20 @@ btnComando[10].addEventListener('click', function(){
     document.getElementById('tela6').setAttribute('style', 'display: flex');
     document.getElementById('tela7').setAttribute('style', 'display: none');
     document.getElementById('tela8').setAttribute('style', 'display: none');
+    document.getElementById('tela9').setAttribute('style', 'display: none');
+});// Botão da formula Resistencia;
+
+btnComando[10].addEventListener('click', function(){
+    document.getElementById('tela').setAttribute('style', 'display: none');
+    document.getElementById('tela1').setAttribute('style', 'display: none');
+    document.getElementById('tela2').setAttribute('style', 'display: none');
+    document.getElementById('tela3').setAttribute('style', 'display: none');
+    document.getElementById('tela4').setAttribute('style', 'display: none');
+    document.getElementById('tela5').setAttribute('style', 'display: none');
+    document.getElementById('tela6').setAttribute('style', 'display: none');
+    document.getElementById('tela7').setAttribute('style', 'display: flex');
+    document.getElementById('tela8').setAttribute('style', 'display: none');
+    document.getElementById('tela9').setAttribute('style', 'display: none');
 });// Botão da formula Resistencia;
 
 btnComando[11].addEventListener('click', function(){
@@ -219,8 +250,9 @@ btnComando[11].addEventListener('click', function(){
     document.getElementById('tela4').setAttribute('style', 'display: none');
     document.getElementById('tela5').setAttribute('style', 'display: none');
     document.getElementById('tela6').setAttribute('style', 'display: none');
-    document.getElementById('tela7').setAttribute('style', 'display: flex');
-    document.getElementById('tela8').setAttribute('style', 'display: none');
+    document.getElementById('tela7').setAttribute('style', 'display: none');
+    document.getElementById('tela8').setAttribute('style', 'display: flex');
+    document.getElementById('tela9').setAttribute('style', 'display: none');
 });// Botão da formula Resistencia;
 
 btnComando[12].addEventListener('click', function(){
@@ -232,7 +264,8 @@ btnComando[12].addEventListener('click', function(){
     document.getElementById('tela5').setAttribute('style', 'display: none');
     document.getElementById('tela6').setAttribute('style', 'display: none');
     document.getElementById('tela7').setAttribute('style', 'display: none');
-    document.getElementById('tela8').setAttribute('style', 'display: flex');
+    document.getElementById('tela8').setAttribute('style', 'display: none');
+    document.getElementById('tela9').setAttribute('style', 'display: flex');
 });// Botão da formula Resistencia;
 
 // ------------------------- Calculos Fisicos --------------------- //
