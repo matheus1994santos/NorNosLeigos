@@ -268,5 +268,5 @@ btnComando[12].addEventListener('click', function(){
     document.getElementById('tela9').setAttribute('style', 'display: flex');
 });// Botão da formula Resistencia;
 
-// ------------------------- Calculos Fisicos --------------------- //
+// ------------------------- Calculos Fisicos ---------------------- //
 
