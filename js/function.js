@@ -53,6 +53,8 @@ var btnComando = [
 
 // ------------------------- Calculos Fisicos --------------------- //
 
+// ------------------------- Formulas FISICAS --------------------- //
+
 var calcFisica = { 
 
     Tensao: function() {
@@ -125,6 +127,325 @@ var calcFisica = {
     }
 
 } // Objeto com Metodos de Formulas eletricas;
+
+var cinematica = { 
+    // Grandezas básicas
+    VelMedia: function(m,s){ 
+
+        if( typeof m != "number" || typeof s != "number" ){
+            return " É necessario dois numeros para realizar equação ";
+        }
+        Vm = m/s;
+
+        return ' A velocidade média é de ' + Vm + 'm/s. '
+    },
+
+    aceleracao: function(m,s){ 
+
+        if( typeof m != "number" || typeof s != "number" ){
+            return " É necessario dois numeros para realizar equação ";
+        }
+        a = m/s;
+
+        return ' A aceleração é de ' + a + 'm/s². '
+    },
+    // M.U.
+    MU: function(v,t){ 
+
+        if( typeof v != "number" || typeof t != "number" ){
+            return " É necessario dois numeros para realizar equação ";
+        }
+        Ax = v*t;
+
+        return ' A aceleração é de ' + Ax + 'm.s. '
+    },
+    // M.U.V.
+    MUV: function(v,t,a){ 
+
+        if( typeof v != "number" || typeof t != "number" || typeof a != "number" ){
+            return " É necessario três numeros para realizar equação ";
+        }
+        muv = (v*t)+((a*t*t)/2);
+
+        return ' A aceleração é de ' + muv + 'm/s. '
+    },
+    /* ----------------------- */
+    // Queda Livre
+    QuedaLivre: function(v,t,g){ 
+
+        if( typeof v != "number" || typeof t != "number" || typeof g != "number" ){
+            return " É necessario três numeros para realizar equação ";
+        }
+        Ah = (v*t)+((g*t*t)/2);
+
+        return ' A Altura é de ' + Ah + 'm. '
+    },
+
+    AlturaMax: function(v, g){ 
+
+        if( typeof v != "number" || typeof g != "number" ){
+            return " É necessario três numeros para realizar equação ";
+        }
+
+        h = (v*v)/2*g;
+
+        return ' A Altura maxima é de ' + h + 'm. '
+    },
+
+    TempoMax: function(v, g){ 
+
+        if( typeof v != "number" || typeof g != "number" ){
+            return " É necessario três numeros para realizar equação ";
+        }
+
+        h = v/g;
+
+        return ' A Tempo Maximo é de ' + h + 's. '
+    },
+    /* ----------------------- */
+    // M.C.U.
+    VelMCU: function(w, R){ 
+
+        if( typeof w != "number" || typeof R != "number" ){
+            return " É necessario três numeros para realizar equação ";
+        }
+
+         v = w*R;
+
+        return ' A Velocidade é de ' + v + 'm/s. '
+    },
+
+    VelAngT: function(T){ 
+
+        if( typeof T != "number"){
+            return " É necessario pelo m numeros para realizar equação ";
+        }
+
+        w = (2 * Math.round((Math.PI)))/T;
+
+        return ' A Velocidade angular é de ' + w + 'rad/s. '
+    },
+
+    VelAngF: function(f){ 
+
+        if( typeof f != "number" ){
+            return " É necessario pelo m numeros para realizar equação ";
+        }
+
+        w = 2 * Math.round((Math.PI)) * f; 
+
+        return ' A Velocidade angular é de ' + w + 'rad/s. '
+    },
+
+    aceleracaoAngW: function(w, R){ 
+
+        if( typeof w != "number" || typeof R != "number" ){
+            return " É necessario três numeros para realizar equação ";
+        }
+
+         a = w*w*R;
+
+        return ' A Velocidade é de ' + a + 'm/s². '
+    },
+
+    aceleracaoAngV: function(v, R){ 
+
+        if( typeof v != "number" || typeof R != "number" ){
+            return " É necessario três numeros para realizar equação ";
+        }
+
+         a = (v*v)/R;
+
+        return ' A Velocidade é de ' + a + 'm/s². '
+    },
+
+    frequencia: function(nv, t){ 
+
+        if( typeof nv != "number" || typeof t != "number" ){
+            return " É necessario três numeros para realizar equação ";
+        }
+
+         f = nv/t;
+
+        return ' A Velocidade é de ' + f + 'Hz.'
+    },
+
+    periodoF: function(T, nv){ 
+
+        if( typeof v != "number" || typeof R != "number" ){
+            return " É necessario três numeros para realizar equação ";
+        }
+
+         t = T/nv;
+
+        return ' A Velocidade é de ' + t + 's. '
+    },
+    /* ----------------------- */
+    // M.H.S
+    PeriodoPendoloS: function(L, g){ 
+
+        if( typeof L != "number" || typeof g != "number" ){
+            return " É necessario dois numeros para realizar equação ";
+        }
+
+         t =  Math.round( 2 * Math.PI * Math.sqrt(L/g));
+
+        return ' A Período é de ' + t + 's. '
+    },
+
+    PeriodoPendoloE: function(m, k){ 
+
+        if( typeof m != "number" || typeof k != "number" ){
+            return " É necessario dois numeros para realizar equação ";
+        }
+
+         t = Math.round( 2 * Math.PI * Math.sqrt(m/k));
+
+        return ' A Período é de ' + t + 's. '
+    }
+} // Objeto com Metodos de Formulas cinematica;
+
+var dinamica = { 
+    // 2ª Lei de Newton
+    forcaR: function(m,a){
+        if( typeof m != "number" || typeof a != "number" ){
+            return " É necessario dois numeros para realizar equação ";
+        }
+        F = m*a;
+        return ' A velocidade média é de ' + F + 'N  ou ' + F + 'kg.m/s2.'
+    },
+
+    forcaP: function(m,g){
+        if( typeof m != "number" || typeof g != "number" ){
+            return " É necessario dois numeros para realizar equação ";
+        }
+       P = m*g; 
+       return ' A velocidade média é de ' + P + 'N  ou ' + P + 'kg.m/s2.'
+       //Math.pow(base, expoente)
+    },
+
+    forcaGravitacional: function(M , m, d){
+        if( typeof M != "number" || typeof m != "number" || typeof d != "number"){
+            return " É necessario dois numeros para realizar equação ";
+        }
+       
+       var G = Math.pow(10, -11);
+
+       F = (6.67*G) * ((M*m)/(d*d));
+       return ' A velocidade média é de ' + F + 'N  ou ' + F + 'kg.m/s2.'
+       //Math.pow(base, expoente)
+    },
+
+    constanteGravitacional: function(){
+        
+       return ' 6,67.10-¹¹N.m²/kg² '
+       //Math.pow(base, expoente)
+    }
+} // Objeto com Metodos de Formulas Dinamicas;
+
+var fluidos = { 
+    MassaEspecifica: function(m,v){
+        if( typeof m != "number" || typeof v != "number" ){
+            return " É necessario dois numeros para realizar equação ";
+        }
+       U = m/v; 
+       return ' A Massa específica é de ' + U + 'kg/m3.' 
+       //Math.pow(base, expoente)
+    },
+
+    pressao: function(F,A){
+        if( typeof F != "number" || typeof A != "number" ){
+            return " É necessario dois numeros para realizar equação ";
+        }
+       p = F/A; 
+       return ' A Massa específica é de ' + p + 'kg/m3.' 
+       //Math.pow(base, expoente)
+    },
+
+    // Empuxo (Arquimedes)
+
+    Empuxo: function(Ul , g, V){
+        if( typeof Ul != "number" || typeof g != "number" || typeof V != "number"){
+            return " É necessario três numeros para realizar equação ";
+        }
+       
+       E = Ul * g * V;
+       return ' A Empuxo é de ' + E + 'N.'
+       //Math.pow(base, expoente)
+    },
+
+    PesoAparente: function(P,E){
+        if( typeof P != "number" || typeof E != "number" ){
+            return " É necessario dois numeros para realizar equação ";
+        }
+       Pap =  P - E; 
+       return ' A Massa específica é de ' + Pap + 'N.' 
+       //Math.pow(base, expoente)
+    },
+    
+    // fim Empuxo (Arquimedes)
+
+    PressaoAbsoluta: function(Patm, U, g, h){
+        if( typeof Patm != "number" || typeof U != "number" || typeof g != "number" || typeof h != "number"){
+            return " É necessario Quatro numeros para realizar equação ";
+        }
+       
+       Pabs = Patm + (U * g * h);
+       return ' A Empuxo é de ' + Pabs + 'N.'
+       //Math.pow(base, expoente)
+    },
+
+    // Pascal
+
+    PrensaoHidraulica: function(F1, A1, F2, A2){
+
+        if ((typeof F1 != "number" || typeof A1 != "number") && (typeof F2 != "number" || typeof A2 != "number")) {
+            return " É necessario quatro numeros para realizar equação destes cilindros. "
+        }
+
+        if( typeof F2 != "number" || typeof A2 != "number"){
+            P1 = F1 / A1;
+            return ' A Prensa hidráulica no cilidro 1 é de ' + P1 + 'N';
+        }
+
+        if (typeof F1 != "number" || typeof A1 != "number") {
+            P2 = F2 / A2;
+            return ' A Prensa hidráulica no cilidro 2 é de ' + P2 + 'N';    
+        }
+
+        
+        P1 = F1 / A1;
+        P2 = F2 / A2;
+            
+       return ' A Prensa hidráulica no cilidro 1 é de ' + P1 + 'N e no cilidro 2 é de ' + P2 + 'N.'
+       //Math.pow(base, expoente)
+    }
+} // Objeto com Metodos de Formulas fluidos;
+
+var termica = { 
+
+}
+
+var opticaGeo = { 
+
+}
+
+var ondulatoriaAcustica = { 
+
+}
+
+var eletrostatica = { 
+
+}
+
+var eletrodinamica = { 
+
+}
+
+var eletromagnetismo = { 
+
+}
+// ------------------------- Formulas FISICAS --------------------- //
 
 btnComando[0].addEventListener('click', function(){
     return calcFisica.Tensao();
@@ -242,31 +563,32 @@ btnComando[10].addEventListener('click', function(){
     document.getElementById('tela9').setAttribute('style', 'display: none');
 });// Botão da formula Resistencia;
 
-btnComando[11].addEventListener('click', function(){
-    document.getElementById('tela').setAttribute('style', 'display: none');
-    document.getElementById('tela1').setAttribute('style', 'display: none');
-    document.getElementById('tela2').setAttribute('style', 'display: none');
-    document.getElementById('tela3').setAttribute('style', 'display: none');
-    document.getElementById('tela4').setAttribute('style', 'display: none');
-    document.getElementById('tela5').setAttribute('style', 'display: none');
-    document.getElementById('tela6').setAttribute('style', 'display: none');
-    document.getElementById('tela7').setAttribute('style', 'display: none');
-    document.getElementById('tela8').setAttribute('style', 'display: flex');
-    document.getElementById('tela9').setAttribute('style', 'display: none');
-});// Botão da formula Resistencia;
+// btnComando[11].addEventListener('click', function(){
+//     document.getElementById('tela').setAttribute('style', 'display: none');
+//     document.getElementById('tela1').setAttribute('style', 'display: none');
+//     document.getElementById('tela2').setAttribute('style', 'display: none');
+//     document.getElementById('tela3').setAttribute('style', 'display: none');
+//     document.getElementById('tela4').setAttribute('style', 'display: none');
+//     document.getElementById('tela5').setAttribute('style', 'display: none');
+//     document.getElementById('tela6').setAttribute('style', 'display: none');
+//     document.getElementById('tela7').setAttribute('style', 'display: none');
+//     document.getElementById('tela8').setAttribute('style', 'display: flex');
+//     document.getElementById('tela9').setAttribute('style', 'display: none');
+// });// Botão da formula Resistencia;
 
-btnComando[12].addEventListener('click', function(){
-    document.getElementById('tela').setAttribute('style', 'display: none');
-    document.getElementById('tela1').setAttribute('style', 'display: none');
-    document.getElementById('tela2').setAttribute('style', 'display: none');
-    document.getElementById('tela3').setAttribute('style', 'display: none');
-    document.getElementById('tela4').setAttribute('style', 'display: none');
-    document.getElementById('tela5').setAttribute('style', 'display: none');
-    document.getElementById('tela6').setAttribute('style', 'display: none');
-    document.getElementById('tela7').setAttribute('style', 'display: none');
-    document.getElementById('tela8').setAttribute('style', 'display: none');
-    document.getElementById('tela9').setAttribute('style', 'display: flex');
-});// Botão da formula Resistencia;
+// btnComando[12].addEventListener('click', function(){
+//     document.getElementById('tela').setAttribute('style', 'display: none');
+//     document.getElementById('tela1').setAttribute('style', 'display: none');
+//     document.getElementById('tela2').setAttribute('style', 'display: none');
+//     document.getElementById('tela3').setAttribute('style', 'display: none');
+//     document.getElementById('tela4').setAttribute('style', 'display: none');
+//     document.getElementById('tela5').setAttribute('style', 'display: none');
+//     document.getElementById('tela6').setAttribute('style', 'display: none');
+//     document.getElementById('tela7').setAttribute('style', 'display: none');
+//     document.getElementById('tela8').setAttribute('style', 'display: none');
+//     document.getElementById('tela9').setAttribute('style', 'display: flex');
+// });// Botão da formula Resistencia;
 
 // ------------------------- Calculos Fisicos ---------------------- //
+
 
